@@ -43,7 +43,6 @@ def main():
             stock_info = filter_fields(stock.info)
             stock_df = stock_df.append(stock_info, ignore_index=True)
         except Exception as e:
-            e.with_traceback()
             print(f'ERROR: Could not retrieve info on {ticker}')
         finally:
             time.sleep(0.5)
